@@ -1,0 +1,10 @@
+.connect-row {
+    width: 100dvw;
+    padding: 0rem 3rem;
+}
+
+@media (max-width: 767px) {
+    .connect-row {
+        padding: 0rem;
+    }
+}

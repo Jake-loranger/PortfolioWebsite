@@ -1,0 +1,53 @@
+.home {
+    height: 100vh;
+}
+
+.name {
+    padding: 2rem 4rem;
+    font-weight: 800;
+}
+
+.name-container {
+    background-color: var(--color-light);
+}
+
+.nav-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    background-color: var(--color-green);
+}
+
+.home .nav {
+    --bs-nav-link-color: var(--color-light);
+    --bs-nav-link-hover-color: var(--color-light-green)
+}
+
+.nav-stack {
+    text-align: end;
+    padding: 3rem 2rem;
+}
+
+@media (max-width: 767px) {
+    .name-container {
+        height: 75dvh;
+    }
+
+    .nav-container {
+        height: 25dvh;
+    }
+
+    .nav-container {
+        display: block;
+    }
+
+    .name {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .nav-stack {
+        text-align: center;
+        padding: 1.5rem 0rem;
+    }
+}

@@ -1,0 +1,40 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+h1 {
+  font-family: var(--font-family-primary);
+  color: var(--font-family-primary);
+  font-weight: 900;
+  font-size: 4rem;
+}
+
+h2 {
+  font-family: var(--font-family-primary);
+  font-weight: bold;
+}
+
+h4 {
+  font-family: var(--font-family-primary);
+}
+
+p {
+  font-family: var(--font-family-secondary);
+}
+
+.container {
+  --max-width: 1200px;
+  --padding: 1.5rem;
+
+  width: min(var(--max-width), 100% - (var(--padding)*2));
+  margin-inline: auto;
+}
+
+.offcanvas {
+  --bs-offcanvas-width: 100dvw !important;
+  --bs-offcanvas-height: 100dvh !important;
+  --bs-offcanvas-bg: var(--color-light) !important;
+}

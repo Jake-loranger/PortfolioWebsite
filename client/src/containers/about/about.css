@@ -1,0 +1,34 @@
+.profile {
+    display: flex;
+    padding: 0 5rem;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.social-icons {
+    width: 3.5rem;
+}
+
+@media (max-width: 992px) {
+    .about-row {
+        padding-top: 20dvh;
+    }
+
+}
+
+@media (max-width: 767px) {
+    .profile {
+        padding: 3rem;
+    }
+    .about-content {
+        padding: 0;
+    }
+    .social-icons-stack {
+        display: flex;
+        justify-content: center;
+    }
+}
