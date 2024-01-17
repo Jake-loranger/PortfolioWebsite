@@ -3,8 +3,45 @@
     padding: 0rem 3rem;
 }
 
+.contact-input-container {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    width: fit-content;
+}
+
+.contact-input-container:focus {
+    border-bottom-color: var(--color-light-green);
+}
+
+.subject {
+    width: 600px;
+}
+
+h3 {
+    line-height: 2.5;
+}
+
+button {
+    color: var(--color-light);
+    background-color: var(--color-green);
+    padding:  0.8rem 1.5rem;
+}
+
 @media (max-width: 767px) {
-    .connect-row {
-        padding: 0rem;
+    .contact-input-container {
+        max-width: 100%;
+        font-size: 1rem;
+        height: auto;
+    }
+
+    .subject {
+        width: 350px;
+    }
+
+
+    h3 {
+        font-size: 1.5rem;
     }
 }

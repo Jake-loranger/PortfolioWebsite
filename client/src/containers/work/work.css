@@ -7,3 +7,14 @@
     width: 100%;
     color: white;
 }
+
+.work .card {
+    --bs-card-bg: var(--color-green);
+    --bs-body-color: var(--color-light);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.work .card:hover {
+    transform: scale(1.005);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.7); /* Adjust the values as needed */
+}

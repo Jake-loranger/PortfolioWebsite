@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import "./contact.css"
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import Form from 'react-bootstrap/Form';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button';
+import emailjs from 'emailjs-com';
 
 const Contact = ({ show, handleCloseContact }) => {
     const [placement, setPlacement] = useState('end');
@@ -37,7 +34,16 @@ const Contact = ({ show, handleCloseContact }) => {
         }
 
         console.log('Form data:', data);
-        // You can perform further actions with the form data here
+        
+        emailjs.send('service_l5qjskk', 'template_jlsf6n9', data, 'dNK6Xy9ofi6C-jCwC')
+        .then((response) => {
+            window.alert('Email sent successfully. Jake will contact you as soon as possible.');
+            window.location.reload();
+        })
+        .catch((error) => {
+            console.error('Failed to send email', error);
+            window.alert('Failed to send email. Please try again.');
+        });
     };
 
     return (
@@ -46,35 +52,23 @@ const Contact = ({ show, handleCloseContact }) => {
                 <Offcanvas.Header className='px-5 pt-4' closeButton>
                     <Offcanvas.Title><h1>Contact</h1></Offcanvas.Title>
                 </Offcanvas.Header>
-                <Offcanvas.Body className='px-5 d-flex align-items-center justify-content-center px-5'>
-                    <Row className='connect-row'>
-                        <Col  lg={6} xl={5} >
-                            <h1>Let's Connect</h1>
-                        </Col>
-                        <Col lg={6} xl={7} >
-                            <Form onSubmit={handleFormSubmit}>
-                                <Form.Group className="mb-3" controlId="nameField">
-                                    <Form.Label>Name</Form.Label>
-                                    <Form.Control type="text" name="name" placeholder="First & Last Name" />
-                                </Form.Group>
-                                <Form.Group className="mb-3" controlId="emailField">
-                                    <Form.Label>Email address</Form.Label>
-                                    <Form.Control type="email" name="email" placeholder="Name@Example.com" />
-                                </Form.Group>
-                                <Form.Group className="mb-3" controlId="subjectField">
-                                    <Form.Label>Subject</Form.Label>
-                                    <Form.Control type="text" name="subject" placeholder="Web Dev, Networking, Employment, etc." />
-                                </Form.Group>
-                                <Form.Group className="mb-3" controlId="messageField">
-                                    <Form.Label>Message</Form.Label>
-                                    <Form.Control as="textarea" placeholder='Elaborate' rows={3} name="message" />
-                                </Form.Group>
-                                <div className='d-flex justify-content-end'>
-                                    <Button type="submit">Send</Button>
-                                </div>
-                            </Form>
-                        </Col>
-                    </Row>
+                <Offcanvas.Body className=' d-flex align-items-center justify-content-center'>
+                            <form onSubmit={handleFormSubmit} className='mx-auto' style={{ display: 'flex', flexDirection: 'column', maxWidth: '1000px' }}>
+                                {/* <div className='d-flex'> */}
+                                <h3>
+                                    <span>Hi, my name is </span>
+                                    <input className='ms-md-4 contact-input-container' id='name' name='name' placeholder='John Doe' autoComplete='off' required/>
+                                    <span>. I am contacting you about</span>
+                                    <input className='ms-md-4 contact-input-container subject' id='subject' name='subject' placeholder='Website, Networking, Employment' autoComplete='off' required/>
+                                    <span>. You can contact me at</span>
+                                    <input className='ms-md-4 contact-input-container' id='email' name='email' type='email' placeholder='johndoe@example.com' autoComplete='off' required/>
+                                    <span>. Thank you!</span>
+
+                                </h3>
+
+                                <div className='d-flex justify-content-end mt-5'><button type='submit'><h4>Submit</h4></button></div>
+                                {/* </div> */}
+                            </form>
                 </Offcanvas.Body>
             </Offcanvas>
         </>

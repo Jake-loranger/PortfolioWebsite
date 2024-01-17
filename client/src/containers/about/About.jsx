@@ -38,13 +38,17 @@ const About = ({ show, handleCloseAbout }) => {
                 <Offcanvas.Header className='px-5 pt-4' closeButton>
                     <Offcanvas.Title><h1>About</h1></Offcanvas.Title>
                 </Offcanvas.Header>
-                <Offcanvas.Body className='px-5 d-flex align-items-center justify-content-center'>
+                <Offcanvas.Body className='px-lg-5 px-md-3 d-flex align-items-center justify-content-center'>
                     <Row className='about-row'>
                         <Col lg={6} xl={5} className='d-flex align-items-center justify-content-center' >
                             <Image className='py-4 profile img-fluid m-auto' src={profile} roundedCircle />
                         </Col>
                         <Col lg={6} xl={7} className='about-content px-5'>
-                            <h2 className='pb-2'> Hi, I'm Jake, <br />a passionate learner and builder</h2>
+                            <h2 className='pb-2'>
+                                Hi, I'm Jake,
+                                <span className="d-none d-md-inline"><br /></span>
+                                a passionate learner and builder
+                            </h2>
                             <p>
                                 My interest in science and technology led me to pursue a degree
                                 in Biomedical Engineering at the University of Maine. I gained

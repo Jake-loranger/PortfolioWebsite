@@ -1,0 +1,8 @@
+.robodraw .nav {
+    --bs-nav-tabs-link-active-color: var(--color-light);
+    --bs-nav-link-color: var(--color-green) !important;
+    --bs-nav-tabs-border-color: #bbbbbb;
+    --bs-nav-tabs-link-hover-border-color: var(--color-light-green) #bbbbbb;
+    --bs-nav-link-hover-color: var(--color-green) !important;
+    --bs-nav-tabs-link-active-bg: var(--color-green);
+}

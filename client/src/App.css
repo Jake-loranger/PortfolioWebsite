@@ -17,6 +17,11 @@ h2 {
   font-weight: bold;
 }
 
+h3 {
+  font-family: var(--font-family-primary);
+  font-weight: bold;
+}
+
 h4 {
   font-family: var(--font-family-primary);
 }
