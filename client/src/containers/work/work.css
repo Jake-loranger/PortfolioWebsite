@@ -8,6 +8,7 @@
     color: white;
 }
 
+
 .work .card {
     --bs-card-bg: var(--color-green);
     --bs-body-color: var(--color-light);
@@ -15,6 +16,5 @@
 }
 
 .work .card:hover {
-    transform: scale(1.005);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.7); /* Adjust the values as needed */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.7);  
 }

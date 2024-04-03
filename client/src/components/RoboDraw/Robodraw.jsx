@@ -50,7 +50,7 @@ const Objective = () => (
       <div className='mb-md-5 px-lg-5'>
         <h4 className="mb-3 text-decoration-underline">Objective</h4>
         <p className='pe-lg-5 pe-md-3'>Design and build a SCARA (Selective Compliance Assembly Robot Arms) that
-          enables the production of physical drawings using automatic or maunal control.</p>
+          enables the production of physical drawings using automatic or maunal control. The photo to the right displays a model of the project modeled and rendered in blender </p>
       </div>
     </Col>
     <Col xs={12} md={12} lg={5} className="d-flex align-items-center">
