@@ -46,7 +46,7 @@ export default RoboDraw;
 
 const Objective = () => (
   <Row xs={1} md={1} lg={2} className="g-5 mx-auto mt-md-5 mt-sm-3">
-    <Col className="d-flex align-items-center">
+    <Col className="d-flex align-items-start">
       <div className='mb-md-5 px-lg-5'>
         <h4 className="mb-3 text-decoration-underline">Objective</h4>
         <p className='pe-lg-5 pe-md-3'>Design and build a SCARA (Selective Compliance Assembly Robot Arms) that
@@ -61,7 +61,7 @@ const Objective = () => (
 
 const Design = () => (
   <Row xs={1} md={1} lg={2} className="g-5 mx-auto mt-md-5 mt-sm-3">
-    <Col className="d-flex align-items-center">
+    <Col className="d-flex align-items-start">
       <div className='mb-md-5 px-lg-5'>
         <h4 className="mb-3 text-decoration-underline">Design</h4>
         <p className='pe-lg-5 pe-md-3'> SCARA robots are known for their
@@ -240,43 +240,60 @@ const Development = () => {
 };
 
 const Analysis = () => (
-  <Row className="g-5 mx-auto my-md-5 my-sm-3">
-    <Col xs={12} md={12} lg={4}>
-      <div className='mb-md-5'>
-        <h4 className="mb-3 text-decoration-underline">Analysis</h4>
-        <p className='pe-lg-5 pe-md-3'>Talk about how only one servo could move at a time which restricted the movement of the end effector. 
-        Talk about the challenges (powering the 12 volt servo without affecting PWM, Inverse Kinematics equation, Arm rigidity wihtout increasing weight)
-        </p>
-      </div>
-    </Col>
-    <Col xs={12} md={12} lg={3} className='d-flex justify-content-center'>
-      <video className='mx-auto' width="70%" height="auto" autoPlay loop muted>
-        <source src={robovid} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-    </Col>
-    <Col xs={12} md={12} lg={5} className="align-items-center">
-      <Stack className="align-items-center justify-content-center">
-        <Figure className="m-auto">
-          <Figure.Image src={drawing1} fluid />
-          <Figure.Caption>
-            This drawing was made manually with one<br/> working servo.
-          </Figure.Caption>
-        </Figure>
-        <Figure className="m-auto">
-          <Figure.Image src={drawing2} fluid />
-          <Figure.Caption>
-          This drawing was made manually with all<br/> servos working.
-          </Figure.Caption>
-        </Figure>
-        <Figure className="m-auto">
-          <Figure.Image src={drawing3} fluid />
-          <Figure.Caption>
-          This drawing was made autoomatically by<br/> implementing  inverse kinematics and inputting<br/> coordinated for a square.
-          </Figure.Caption>
-        </Figure>
-      </Stack>
-    </Col>
-    
-  </Row>
+  <>
+    <Row xs={1} md={1} lg={2} className=" my-5 justify-content-between mx-5">
+      <Col className="d-flex align-items-center ">
+        <div className='mb-md-5'>
+          <h4 className="mb-3 text-decoration-underline">Analysis</h4>
+          <p className='pe-lg-5 pe-md-3'>An improvement that I would implement into this project is the movement of both motors with one numpad button. 
+            Only one servo was specified to move at a time which restricted the movement of the end effector. A command should have been programmed 
+            within the while statement in main.py to allow for the increase in angle of both the motors. This would significantly increase the area 
+            the end effector could span.  
+            
+            <br/><br/>
+            
+            A few challenges were overcome throughout this project.  The first was powering both a 12 volt motor and two 3.3 volt motors with a ~5 
+            volt power source without affecting the PWM (pulse width modulation), however this was overcome by implementing a level shifter to keep 
+            the PWM consistent while providing enough power to each motor. Another challege that arose was trying to optimize the stability of the 
+            end effector without increasing weight too much.
+          </p>
+        </div>
+      </Col>
+      <Col xs={12} md={12} lg={3} className='d-flex justify-content-center'>
+        <video className='mx-auto' width="70%" height="auto" autoPlay loop muted>
+          <source src={robovid} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </Col>
+    </Row>
+    <Row xs={1} md={1} lg={2} className="g-5 mx-auto mt-md-5 mt-sm-3 pt-md-5 pt-sm-3 justify-content-center">
+        <Col xs={12} md={12} lg={3} className='d-flex justify-content-center'>
+          <Figure>
+            <h4>Trial 1</h4>
+            <Figure.Image src={drawing1} fluid />
+            <Figure.Caption>
+              <p>This drawing was made manually with one<br /> working servo.</p>
+            </Figure.Caption>
+          </Figure>
+        </Col>
+        <Col xs={12} md={12} lg={3} className='d-flex justify-content-center'>
+          <Figure>
+            <h4>Trial 2</h4>
+            <Figure.Image src={drawing2} fluid />
+            <Figure.Caption>
+              <p>This drawing was made manually with all<br /> servos working.</p>
+            </Figure.Caption>
+          </Figure>
+        </Col>
+        <Col xs={12} md={12} lg={3} className='d-flex justify-content-center'>
+          <Figure>
+            <h4>Trial 3</h4>
+            <Figure.Image src={drawing3} fluid />
+            <Figure.Caption>
+              <p>This drawing was made automatically by<br /> implementing  inverse kinematics and inputting<br /> coordinated for a square.</p>
+            </Figure.Caption>
+          </Figure>
+        </Col>
+    </Row>
+  </>
 );
