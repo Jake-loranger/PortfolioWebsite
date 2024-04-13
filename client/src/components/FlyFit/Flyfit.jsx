@@ -51,7 +51,7 @@ export default FlyFit;
 
 const Objective = () => (
   <Row xs={1} md={2} lg={2} className="g-5 mx-auto mt-md-5 mt-sm-3">
-    <Col className="d-flex align-items-center">
+    <Col className="d-flex justify-content-start">
       <div className='mb-md-5 px-lg-5'>
         <h4 className="mb-3 text-decoration-underline">Objective</h4>
         <p className='pe-lg-5 pe-md-3'>Develop a sensor system to seamlessly integrate

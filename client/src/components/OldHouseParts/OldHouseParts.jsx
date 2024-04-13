@@ -3,9 +3,10 @@ import { Offcanvas, Row, Col, Nav, Image, Tab, Tabs, Stack, Figure } from 'react
 import './oldhouseparts.css';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { solarizedlight } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import structure from '../../assets/img/project-img/OldHouseParts-img/structure.png'
 
 const OldHouseParts = ({ show, handleClose }) => {
-    const [activeTab, setActiveTab] = useState('design');
+    const [activeTab, setActiveTab] = useState('overview');
 
     const handleTabSelect = (selectedTab) => {
         setActiveTab(selectedTab);
@@ -18,18 +19,14 @@ const OldHouseParts = ({ show, handleClose }) => {
             </Offcanvas.Header>
             <Offcanvas.Body className='px-5 pt-4' >
                 <Tabs activeKey={activeTab} onSelect={handleTabSelect} id="oldhouseparts-tabs" className="mb-3">
-
+                    <Tab eventKey="overview" title="Overview">
+                        <Overview />
+                    </Tab>
                     <Tab eventKey="design" title="Design">
                         <Design />
                     </Tab>
                     <Tab eventKey="development" title="Development">
                         <Development />
-                    </Tab>
-                    <Tab eventKey="intergation" title="Integration">
-                        <Integration />
-                    </Tab>
-                    <Tab eventKey="seo" title="SEO">
-                        <SEO />
                     </Tab>
                 </Tabs>
             </Offcanvas.Body>
@@ -39,6 +36,14 @@ const OldHouseParts = ({ show, handleClose }) => {
 
 export default OldHouseParts;
 
+const Overview = () => {
+    return (
+        <>
+            <Image src={structure} fluid />
+        </>
+    );
+
+};
 
 const Design = () => {
     const appCode =
@@ -61,7 +66,7 @@ const Design = () => {
                     <div className='mb-md-5 px-lg-5'>
                         <h4 className="mb-3 text-decoration-underline"> Frontend Design</h4>
                         <p className='pe-lg-5 pe-md-3'>
-                            The frontend design consists of five pages: Home, Inventory, About, FAQs, and Contact. Each page has it's own component and url route. 
+                            The frontend design consists of five pages: Home, Inventory, About, FAQs, and Contact. Each page has it's own component and url route.
                         </p>
                     </div>
                 </Col>
@@ -75,7 +80,7 @@ const Design = () => {
             <Row xs={1} md={1} lg={2} className="g-5 mx-auto mt-md-5 mt-sm-3">
                 <Col xs={12} md={12} lg={6} className="d-flex align-items-start">
                     <Image>
-                        
+
                     </Image>
                 </Col>
                 <Col xs={12} md={12} lg={6}>
