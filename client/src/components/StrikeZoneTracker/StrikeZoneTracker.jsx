@@ -3,7 +3,7 @@ import "./strikezonetracker.css";
 import { Offcanvas, Row, Col, Nav, Image, Tab, Tabs, Stack, Figure } from 'react-bootstrap';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { solarizedlight } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import demo from '../../assets/img/project-img/StrikeZoneTracker-img/demo.mp4'
+import demo from '../../assets/img/project-img/StrikeZoneTracker-img/demoSZT.mp4'
 
 const StrikeZoneTracker = ({ show, handleClose }) => {
   const [activeTab, setActiveTab] = useState('demo');
@@ -53,7 +53,7 @@ const Demo = () => (
       </div>
     </Col>
     <Col xs={12} md={12} lg={5} className="d-flex align-items-center">
-      <video className='mx-auto' width="110%" height="auto" autoPlay loop muted>
+      <video className='mx-auto' width="100%" height="auto" autoPlay loop muted>
         <source src={demo} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
