@@ -74,16 +74,16 @@ const Work = ({ show, handleCloseWork }) => {
             {selectedProject === 'StrikeZoneTracker' && <StrikeZoneTracker show={true} handleClose={handleCloseContent} />}
 
             <Offcanvas className='work' show={show} onHide={handleCloseWork} placement={placement}>
-                <Offcanvas.Header className='px-5 pt-4' closeButton>
+                <Offcanvas.Header className='px-md-5 pt-4' closeButton>
                     <Offcanvas.Title><h1>Work</h1></Offcanvas.Title>
                 </Offcanvas.Header>
-                <Offcanvas.Body className='px-lg-5'>
-                    <Row xs={1} md={2} lg={2} className="g-5 mx-5 mt-2 mb-4">
+                <Offcanvas.Body className='px-md-5 px-sm-1'>
+                    <Row xs={1} md={2} lg={2} className="g-5 mx-lg-5 mx-sm-2 mt-2 mb-4">
                         {projects.map((project, idx) => (
                             <Col key={idx} className='d-flex justify-content-center'>
                                 <Card
                                     onClick={() => handleProjectClick(project.name)}
-                                    className='px-lg-5 py-lg-3'
+                                    className='px-xl-5 px-lg-2'
                                     style={{
                                         cursor: 'pointer',
                                         width: "500px",
@@ -100,7 +100,6 @@ const Work = ({ show, handleCloseWork }) => {
                                         <Card.Text className='text-center pb-2'>
                                             <p>{project.description}</p>
                                         </Card.Text>
-                                        {/* <h6 className='text-end'>{project.year}</h6> */}
                                     </Card.Body>
                                 </Card>
                             </Col>

@@ -30,14 +30,11 @@
 
 @media (max-width: 767px) {
     .name-container {
-        height: 75dvh;
-    }
-
+        height: 65dvh;
+    } 
     .nav-container {
-        height: 25dvh;
-    }
-
-    .nav-container {
+        height: 35dvh;
+        padding-bottom: 3rem;
         display: block;
     }
 

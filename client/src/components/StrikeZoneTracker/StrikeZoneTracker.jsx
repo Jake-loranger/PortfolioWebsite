@@ -14,10 +14,10 @@ const StrikeZoneTracker = ({ show, handleClose }) => {
 
   return (
     <Offcanvas className='robodraw' show={show} onHide={handleClose} placement='end'>
-      <Offcanvas.Header className='px-5 pt-4' closeButton>
+      <Offcanvas.Header className='px-md-5 pt-4' closeButton>
         <Offcanvas.Title><h1>StrikeZoneTracker</h1></Offcanvas.Title>
       </Offcanvas.Header>
-      <Offcanvas.Body className='px-5 pt-4' >
+      <Offcanvas.Body className='px-md-5 pt-4' >
         <Tabs activeKey={activeTab} onSelect={handleTabSelect} id="flyfit-tabs" className="mb-3">
           <Tab eventKey="demo" title="Demo">
             <Demo />

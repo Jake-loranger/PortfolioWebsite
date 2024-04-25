@@ -16,10 +16,10 @@ const OldHouseParts = ({ show, handleClose }) => {
 
     return (
         <Offcanvas className='robodraw' show={show} onHide={handleClose} placement='end'>
-            <Offcanvas.Header className='px-5 pt-4' closeButton>
+            <Offcanvas.Header className='px-md-5 pt-4' closeButton>
                 <Offcanvas.Title><h1>Old House Parts Co.</h1></Offcanvas.Title>
             </Offcanvas.Header>
-            <Offcanvas.Body className='px-5 pt-4' >
+            <Offcanvas.Body className='px-md-5 pt-4' >
                 <Tabs activeKey={activeTab} onSelect={handleTabSelect} id="oldhouseparts-tabs" className="mb-3">
                     <Tab eventKey="overview" title="Overview">
                         <Overview />
@@ -68,9 +68,6 @@ const Overview = () => (
                     Your browser does not support the video tag.
                 </video>
             </Col>
-        </Row>
-        <Row xs={1} md={1} lg={1} className="g-5 mx-5 my-md-5 my-sm-3" >
-            <Image src={structure} />
         </Row>
     </>
 );

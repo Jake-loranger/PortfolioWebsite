@@ -40,7 +40,7 @@ const Home = () => {
                 </Col>
                 <Col className='nav-container' xs={12} md={4} lg={4} xxl={3}>
                     <Nav>
-                        <Stack className='nav-stack' gap={1}>
+                        <Stack className='nav-stack' gap={3}>
                             <Nav.Link onClick={() => handleNavClick('work')}>
                                 <h2>Work</h2>
                             </Nav.Link>

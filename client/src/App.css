@@ -8,8 +8,6 @@ html {
 h1 {
   font-family: var(--font-family-primary);
   color: var(--font-family-primary);
-  font-weight: 900;
-  font-size: 4rem;
 }
 
 h2 {

@@ -24,7 +24,7 @@ const FlyFit = ({ show, handleClose }) => {
       <Offcanvas.Header className='px-md-5 pt-4' closeButton>
         <Offcanvas.Title><h1>FlyFit</h1></Offcanvas.Title>
       </Offcanvas.Header>
-      <Offcanvas.Body className='px-5 pt-4' >
+      <Offcanvas.Body className='px-md-5 pt-4' >
         <Tabs activeKey={activeTab} onSelect={handleTabSelect} id="flyfit-tabs" className="mb-3">
           <Tab eventKey="objective" title="Objective">
             <Objective />
