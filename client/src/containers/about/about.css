@@ -18,6 +18,14 @@
         padding-top: 20dvh;
     }
 
+    .profile {
+        padding: 14rem;
+        margin-bottom: 3rem;
+    }
+    .about-content {
+        padding-top: 2rem;
+    }
+
 }
 
 @media (max-width: 767px) {
